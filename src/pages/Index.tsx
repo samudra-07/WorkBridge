@@ -49,7 +49,7 @@ const Index = () => {
                     <div className="flex items-center">
                       <div className="h-10 w-10 rounded-full overflow-hidden mr-3">
                         <img 
-                          src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8YXZhdGFyfGVufDB8fDB8fHww"
+                          src="https://cdn-icons-png.flaticon.com/128/4140/4140047.png"
                           alt="Profile"
                           className="h-full w-full object-cover"
                         />
@@ -58,7 +58,7 @@ const Index = () => {
                         <div className="flex items-center text-yellow-500 text-sm font-medium">
                           ★★★★★ <span className="text-gray-700 ml-1">5.0</span>
                         </div>
-                        <p className="text-gray-700 font-medium">Priya S.</p>
+                        <p className="text-gray-700 font-medium">Shreshta K.</p>
                         <p className="text-xs text-gray-500">Painter</p>
                       </div>
                     </div>
