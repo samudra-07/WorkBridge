@@ -154,7 +154,7 @@ const Dashboard = () => {
                     <div>
                       <p className="font-medium text-gray-900">New bid on your task</p>
                       <p className="text-sm text-gray-500">
-                        {user.role === 'client' ? 'Priya Singh placed a bid of ₹2,800 on "Bathroom Plumbing Repair"' : 'Your bid of ₹6,500 was received on "Living Room Painting"'}
+                        {user.role === 'client' ? 'Aashi from Sonipat placed a bid of ₹2,800 on "Bathroom Plumbing Repair"' : 'Your bid of ₹6,500 was received on "Living Room Painting"'}
                       </p>
                       <p className="text-xs text-gray-400 mt-1">2 hours ago</p>
                     </div>
@@ -184,8 +184,8 @@ const Dashboard = () => {
                       <p className="font-medium text-gray-900">New review received</p>
                       <p className="text-sm text-gray-500">
                         {user.role === 'client' 
-                          ? 'Amit Patel left you a 5-star review' 
-                          : 'Rohit Sharma left you a 5-star review'
+                          ? 'Aashi from Sonipat left you a 5-star review' 
+                          : 'Shreesta from Delhi left you a 5-star review'
                         }
                       </p>
                       <p className="text-xs text-gray-400 mt-1">2 days ago</p>
@@ -282,9 +282,14 @@ const Dashboard = () => {
                                 {userBid && (
                                   <Badge 
                                     variant={
-                                      userBid.status === 'accepted' ? 'success' :
+                                      userBid.status === 'accepted' ? 'secondary' :
                                       userBid.status === 'rejected' ? 'destructive' :
                                       'default'
+                                    }
+                                    className={
+                                      userBid.status === 'accepted' ? 'bg-green-100 text-green-800 hover:bg-green-200' :
+                                      userBid.status === 'rejected' ? '' :
+                                      ''
                                     }
                                   >
                                     {userBid.status === 'accepted' ? 'Won' :
@@ -467,7 +472,7 @@ const Dashboard = () => {
                               }"
                             </p>
                             <p className="text-sm font-medium mt-2">
-                              - {user.role === 'client' ? 'Amit Patel' : 'Rohit Sharma'}
+                              - {user.role === 'client' ? 'Aashi from Sonipat' : 'Shreesta from Delhi'}
                             </p>
                           </div>
                           
@@ -504,10 +509,10 @@ const Dashboard = () => {
                         <div className="flex items-center">
                           <Avatar className="h-10 w-10">
                             <AvatarImage src={user.role === 'client' ? "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8YXZhdGFyfGVufDB8fDB8fHww" : "https://images.unsplash.com/photo-1633332755192-727a05c4013d?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OHx8YXZhdGFyfGVufDB8fDB8fHww"} />
-                            <AvatarFallback>{user.role === 'client' ? 'PS' : 'RS'}</AvatarFallback>
+                            <AvatarFallback>{user.role === 'client' ? 'AS' : 'SD'}</AvatarFallback>
                           </Avatar>
                           <div className="ml-3">
-                            <p className="font-medium">{user.role === 'client' ? 'Priya Singh' : 'Rohit Sharma'}</p>
+                            <p className="font-medium">{user.role === 'client' ? 'Aashi from Sonipat' : 'Shreesta from Delhi'}</p>
                             <p className="text-sm text-gray-500">Bathroom Plumbing Repair</p>
                           </div>
                         </div>
@@ -527,10 +532,10 @@ const Dashboard = () => {
                         <div className="flex items-center">
                           <Avatar className="h-10 w-10">
                             <AvatarImage src={user.role === 'client' ? "https://images.unsplash.com/photo-1566492031773-4f4e44671857?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTh8fGluZGlhbiUyMG1hbnxlbnwwfHwwfHx8MA%3D%3D" : "https://images.unsplash.com/photo-1664575599736-c5197c684153?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTd8fGluZGlhbiUyMHdvbWFufGVufDB8fDB8fHww"} />
-                            <AvatarFallback>{user.role === 'client' ? 'AP' : 'NG'}</AvatarFallback>
+                            <AvatarFallback>{user.role === 'client' ? 'AP' : 'AS'}</AvatarFallback>
                           </Avatar>
                           <div className="ml-3">
-                            <p className="font-medium">{user.role === 'client' ? 'Amit Patel' : 'Neha Gupta'}</p>
+                            <p className="font-medium">{user.role === 'client' ? 'Amit Patel' : 'Aashi from Sonipat'}</p>
                             <p className="text-sm text-gray-500">
                               {user.role === 'client' ? 'Bathroom Plumbing Repair' : 'Living Room Painting'}
                             </p>
