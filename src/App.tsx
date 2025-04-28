@@ -37,7 +37,7 @@ const App = () => (
             <Route path="/post-task" element={<PostTask />} />
             <Route path="/dashboard" element={<Dashboard />} />
             <Route path="/how-it-works" element={<HowItWorks />} />
-            {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
+            <Route path="/profile" element={<Profile />} />
             <Route path="*" element={<NotFound />} />
           </Routes>
         </BrowserRouter>

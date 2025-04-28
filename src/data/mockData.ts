@@ -1,4 +1,3 @@
-
 import { User, Task, Category, Bid } from '../types';
 
 // Mock Categories
@@ -39,103 +38,85 @@ export const CATEGORIES: Category[] = [
 export const USERS: User[] = [
   {
     id: 'user-1',
-    name: 'Rohit Sharma',
-    email: 'rohit@example.com',
+    name: 'Samudragupta Barma',
+    email: 'samudragupta@example.com',
     phone: '+91 9876543210',
-    role: 'client',
-    avatar: 'https://images.unsplash.com/photo-1633332755192-727a05c4013d?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OHx8YXZhdGFyfGVufDB8fDB8fHww',
+    role: 'worker',
+    avatar: '',
     rating: 4.8,
     totalReviews: 15,
     createdAt: '2023-09-15T10:30:00.000Z',
-    bio: 'Business owner looking for reliable services',
+    bio: 'Expert plumber with 8 years of experience in residential and commercial projects',
     verified: true,
+    skills: ['Plumbing', 'Pipe Fitting', 'Bathroom Installation'],
     location: {
-      lat: 28.6139,
-      lng: 77.2090,
-      address: 'Delhi, India'
+      lat: 26.1445,
+      lng: 91.7362,
+      address: 'Guwahati, Assam'
     }
   },
   {
     id: 'user-2',
-    name: 'Priya Singh',
-    email: 'priya@example.com',
+    name: 'Aashi',
+    email: 'aashi@example.com',
     phone: '+91 9876543211',
     role: 'worker',
-    avatar: 'https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8YXZhdGFyfGVufDB8fDB8fHww',
+    avatar: '',
     rating: 4.9,
     totalReviews: 27,
     createdAt: '2023-08-20T15:45:00.000Z',
-    bio: 'Professional interior painter with 5 years of experience',
-    skills: ['Painting', 'Wall Repair', 'Furniture Assembly'],
+    bio: 'Professional carpenter specializing in custom furniture and home renovations',
+    skills: ['Carpentry', 'Furniture Assembly', 'Wood Work'],
     verified: true,
     location: {
-      lat: 28.6129,
-      lng: 77.2295,
-      address: 'East Delhi, India'
+      lat: 29.0588,
+      lng: 76.0856,
+      address: 'Rohtak, Haryana'
     }
   },
   {
     id: 'user-3',
-    name: 'Amit Patel',
-    email: 'amit@example.com',
+    name: 'Shreshta',
+    email: 'shreshta@example.com',
     phone: '+91 9876543212',
     role: 'worker',
-    avatar: 'https://images.unsplash.com/photo-1566492031773-4f4e44671857?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTh8fGluZGlhbiUyMG1hbnxlbnwwfHwwfHx8MA%3D%3D',
+    avatar: '',
     rating: 4.7,
     totalReviews: 32,
     createdAt: '2023-07-10T09:20:00.000Z',
-    bio: 'Certified plumber specializing in residential work',
-    skills: ['Plumbing', 'Installation', 'Maintenance'],
+    bio: 'Professional painter with expertise in interior and exterior painting',
+    skills: ['Painting', 'Wall Design', 'Texture Work'],
     verified: true,
     location: {
-      lat: 28.5355,
-      lng: 77.3910,
-      address: 'Noida, UP, India'
+      lat: 28.7041,
+      lng: 77.1025,
+      address: 'Delhi, India'
     }
   },
   {
     id: 'user-4',
-    name: 'Neha Gupta',
-    email: 'neha@example.com',
+    name: 'Pawan Kumar',
+    email: 'pawan@example.com',
     phone: '+91 9876543213',
     role: 'client',
-    avatar: 'https://images.unsplash.com/photo-1664575599736-c5197c684153?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTd8fGluZGlhbiUyMHdvbWFufGVufDB8fDB8fHww',
+    avatar: '',
     rating: 4.6,
     totalReviews: 8,
     createdAt: '2023-10-05T14:15:00.000Z',
-    bio: 'Homemaker looking for household services',
+    bio: 'Business owner looking for skilled professionals for various projects',
     verified: true,
     location: {
-      lat: 28.4595,
-      lng: 77.0266,
-      address: 'Gurugram, HR, India'
+      lat: 25.1304,
+      lng: 85.4594,
+      address: 'Nalanda, Bihar'
     }
   },
   {
     id: 'user-5',
-    name: 'Raj Kumar',
-    email: 'raj@example.com',
-    phone: '+91 9876543214',
-    role: 'worker',
-    avatar: 'https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8bWFuJTIwcG9ydHJhaXR8ZW58MHx8MHx8fDA%3D',
-    rating: 4.9,
-    totalReviews: 41,
-    createdAt: '2023-06-12T11:50:00.000Z',
-    bio: 'Full stack web developer with expertise in React and Node.js',
-    skills: ['Web Development', 'UI/UX Design', 'Mobile App Development'],
-    verified: true,
-    location: {
-      lat: 12.9716,
-      lng: 77.5946,
-      address: 'Bangalore, India'
-    }
-  },
-  {
-    id: 'user-6',
-    name: 'Admin User',
+    name: 'Admin',
     email: 'admin@workbridge.com',
     role: 'admin',
-    avatar: 'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTJ8fG1hbnxlbnwwfHwwfHx8MA%3D%3D',
+    avatar: '',
     rating: 5.0,
     totalReviews: 0,
     createdAt: '2023-01-01T00:00:00.000Z',
