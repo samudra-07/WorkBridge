@@ -1,73 +1,77 @@
-# Welcome to your Lovable project
+🚀 WorkBridge
+WorkBridge is a modern platform that connects clients and workers to get tasks done! Whether you're a client looking for help or a worker bidding on jobs, this app streamlines the process with an easy-to-use interface. Built with React, Vite, and Tailwind CSS, it’s designed for speed and scalability!
 
-## Project info
+🌟 Features
+🏠 Homepage: Browse through services and tasks.
 
-**URL**: https://lovable.dev/projects/41d71501-d8a4-4deb-84d9-754b225ded75
+💼 Client Dashboard: Post tasks and manage them easily.
 
-## How can I edit this code?
+👷‍♂️ Worker Dashboard: View tasks, place bids, and track progress.
 
-There are several ways of editing your application.
+🔒 User Authentication: Secure login and registration.
 
-**Use Lovable**
+📝 Post Tasks: Clients can easily create and submit tasks.
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/41d71501-d8a4-4deb-84d9-754b225ded75) and start prompting.
+📊 Task Management: View, edit, and track tasks in real time.
 
-Changes made via Lovable will be committed automatically to this repo.
+🌙 Dark Mode: Light and dark modes for your comfort.
 
-**Use your preferred IDE**
+🛠️ Tech Stack
+Frontend: React, TypeScript, Vite
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+Styling: Tailwind CSS
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+UI Components: Shadcn-UI (Radix UI)
 
-Follow these steps:
+State Management: React Context
 
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
+Forms: React Hook Form + Zod for validation
 
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
+Routing: React Router
 
-# Step 3: Install the necessary dependencies.
-npm i
+⚠️ No Backend yet! This is a front-end demo using mock data. A future backend will power persistent data and real authentication.
 
-# Step 4: Start the development server with auto-reloading and an instant preview.
+🎯 Future Goals
+🔙 Backend Implementation: Node.js/Express or similar.
+
+🛠️ Database: Integration with MongoDB/PostgreSQL for persistent storage.
+
+🔑 Authentication: Real login/signup with JWT/OAuth.
+
+📈 AI Recommendations: Personalize tasks using AI.
+
+💳 Payment Integration: Allow workers to get paid for completed tasks.
+
+📊 Admin Dashboard: Manage users, tasks, and more.
+
+🚀 Getting Started
+Prerequisites
+Node.js (v14+)
+
+npm or yarn
+
+Installation
+bash
+Copy
+Edit
+git clone https://github.com/samudra-07/WorkBridge.git
+cd WorkBridge
+npm install
+Run the App
+bash
+Copy
+Edit
 npm run dev
-```
+Open http://localhost:3000 in your browser!
 
-**Edit a file directly in GitHub**
+🤝 Contributing
+Want to contribute? Fork this repo, create a branch, and submit a pull request! We’d love to have you onboard.
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+📄 License
+This project is licensed under the MIT License.
 
-**Use GitHub Codespaces**
+📬 Contact
+Got questions or feedback? Reach out to samudra-07!
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
-
-## What technologies are used for this project?
-
-This project is built with:
-
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
-
-## How can I deploy this project?
-
-Simply open [Lovable](https://lovable.dev/projects/41d71501-d8a4-4deb-84d9-754b225ded75) and click on Share -> Publish.
-
-## Can I connect a custom domain to my Lovable project?
-
-Yes, you can!
-
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
-
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/tips-tricks/custom-domain#step-by-step-guide)
+Add badges (for build, stars, forks, etc.) once CI is set up.
+This version is clean, straightforward, and perfect for showcasing your app. It includes everything needed to attract contributors and users, while maintaining a professional and user-friendly tone.
