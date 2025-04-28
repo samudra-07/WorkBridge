@@ -314,7 +314,7 @@ const Index = () => {
             Join WorkBridge today and connect with skilled workers or find work opportunities near you.
           </p>
           <div className="mt-8 flex flex-col sm:flex-row justify-center gap-4">
-            <Button asChild size="lg" variant="default" className="text-white border-white hover:bg-workbridge-700">
+            <Button asChild size="lg" variant="default" className="bg-white text-workbridge-600 hover:bg-gray-100">
               <Link to="/post-task">Post a Task</Link>
             </Button>
             <Button asChild size="lg" variant="default" className="bg-white text-workbridge-600 hover:bg-gray-100">
