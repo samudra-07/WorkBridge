@@ -39,7 +39,7 @@ export const USERS: User[] = [
     id: 'user-1',
     name: 'Samudragupta Barma',
     email: 'samudragupta@example.com',
-    phone: '+91 9876543210',
+    phone: '+91 8134855675',
     role: 'worker',
     avatar: 'https://ui-avatars.com/api/?name=Samudragupta+Barma&background=random',
     rating: 4.8,
@@ -51,7 +51,7 @@ export const USERS: User[] = [
     location: {
       lat: 26.1445,
       lng: 91.7362,
-      address: 'Guwahati, Assam'
+      address: 'Nalbari, Assam'
     }
   },
   {
@@ -142,8 +142,8 @@ export const TASKS: Task[] = [
       address: 'Connaught Place, Delhi, India'
     },
     images: [
-      'https://images.unsplash.com/photo-1585909695284-32d2985ac9c0?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8cGx1bWJpbmd8ZW58MHx8MHx8fDA%3D',
-      'https://images.unsplash.com/photo-1534137667199-675a39f476d4?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8cGx1bWJpbmd8ZW58MHx8MHx8fDA%3D'
+      'https://lh5.googleusercontent.com/proxy/4UsSZ9I1KQgjAZaCPAaSamJFFRuhsydFRYLHtYxPzUte1RipeldJ_q1_5AJFTRPfGHsm29XLrqVt2B3C5MOtR2ALdnRJ-hjdfnLGnqdjCUlsK7AeLk-ZR1bG2qvDmcrKSrX19xb1GOcMx054vSco6cn4o7mC2iA',
+      'https://img.staticmb.com/mbcontent/images/crop/uploads/2023/2/Bathroom-plumbing-system_0_1200.jpg'
     ],
     createdAt: '2023-11-10T09:30:00.000Z',
     deadline: '2023-11-15T18:00:00.000Z',
@@ -186,7 +186,7 @@ export const TASKS: Task[] = [
       address: 'Nalanda, Bihar'
     },
     images: [
-      'https://images.unsplash.com/photo-1562663464-36b9b99558c9?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8cGFpbnRpbmclMjB3YWxsc3xlbnwwfHwwfHx8MA%3D%3D'
+      'https://img.staticmb.com/mbcontent/images/uploads/2023/2/wall-paint-color-ideas-for-home.jpg'
     ],
     createdAt: '2023-11-12T14:45:00.000Z',
     deadline: '2023-11-18T18:00:00.000Z',
