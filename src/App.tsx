@@ -15,6 +15,7 @@ import TaskDetail from "./pages/TaskDetail";
 import PostTask from "./pages/PostTask";
 import Dashboard from "./pages/Dashboard";
 import HowItWorks from "./pages/HowItWorks";
+import Profile from "./pages/Profile";
 
 // Contexts
 import { AuthProvider } from "./contexts/AuthContext";
