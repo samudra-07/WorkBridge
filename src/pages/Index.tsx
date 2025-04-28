@@ -235,13 +235,13 @@ const Index = () => {
                   <div className="flex items-center">
                     <div className="h-10 w-10 rounded-full overflow-hidden mr-3">
                       <img 
-                        src="https://images.unsplash.com/photo-1633332755192-727a05c4013d?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OHx8YXZhdGFyfGVufDB8fDB8fHww" 
+                        src="https://cdn-icons-png.flaticon.com/128/4140/4140048.png" 
                         alt="Client" 
                         className="h-full w-full object-cover"
                       />
                     </div>
                     <div>
-                      <p className="font-medium">Rohit S.</p>
+                      <p className="font-medium">Rohit</p>
                       <div className="flex items-center text-yellow-500 text-sm">
                         ★★★★★
                       </div>
@@ -261,15 +261,15 @@ const Index = () => {
                   <div className="flex items-center">
                     <div className="h-10 w-10 rounded-full overflow-hidden mr-3">
                       <img 
-                        src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8YXZhdGFyfGVufDB8fDB8fHww" 
+                        src="https://cdn-icons-png.flaticon.com/128/1154/1154448.png" 
                         alt="Worker" 
                         className="h-full w-full object-cover"
                       />
                     </div>
                     <div>
-                      <p className="font-medium">Priya S.</p>
+                      <p className="font-medium">Priya</p>
                       <div className="flex items-center text-yellow-500 text-sm">
-                        ★★★★★
+                        ★★★★
                       </div>
                     </div>
                   </div>
@@ -287,13 +287,13 @@ const Index = () => {
                   <div className="flex items-center">
                     <div className="h-10 w-10 rounded-full overflow-hidden mr-3">
                       <img 
-                        src="https://images.unsplash.com/photo-1664575599736-c5197c684153?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTd8fGluZGlhbiUyMHdvbWFufGVufDB8fDB8fHww" 
+                        src="https://cdn-icons-png.flaticon.com/128/11498/11498793.png" 
                         alt="Client" 
                         className="h-full w-full object-cover"
                       />
                     </div>
                     <div>
-                      <p className="font-medium">Neha G.</p>
+                      <p className="font-medium">Neha</p>
                       <div className="flex items-center text-yellow-500 text-sm">
                         ★★★★★
                       </div>
