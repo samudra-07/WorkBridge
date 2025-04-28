@@ -41,7 +41,7 @@ export const USERS: User[] = [
     email: 'samudragupta@example.com',
     phone: '+91 8134855675',
     role: 'worker',
-    avatar: 'https://ui-avatars.com/api/?name=Samudragupta+Barma&background=random',
+    avatar: 'https://cdn-icons-png.flaticon.com/128/1999/1999625.png',
     rating: 4.8,
     totalReviews: 15,
     createdAt: '2023-09-15T10:30:00.000Z',
@@ -60,7 +60,7 @@ export const USERS: User[] = [
     email: 'aashi@example.com',
     phone: '+91 9876543211',
     role: 'worker',
-    avatar: 'https://ui-avatars.com/api/?name=Aashi&background=random',
+    avatar: 'https://cdn-icons-png.flaticon.com/128/6997/6997662.png',
     rating: 4.9,
     totalReviews: 27,
     createdAt: '2023-08-20T15:45:00.000Z',
@@ -79,7 +79,7 @@ export const USERS: User[] = [
     email: 'shreshta@example.com',
     phone: '+91 9876543212',
     role: 'worker',
-    avatar: 'https://ui-avatars.com/api/?name=Shreshta&background=random',
+    avatar: 'https://cdn-icons-png.flaticon.com/128/4140/4140047.png',
     rating: 4.7,
     totalReviews: 32,
     createdAt: '2023-07-10T09:20:00.000Z',
@@ -98,7 +98,7 @@ export const USERS: User[] = [
     email: 'pawan@example.com',
     phone: '+91 9876543213',
     role: 'client',
-    avatar: 'https://ui-avatars.com/api/?name=Pawan+Kumar&background=random',
+    avatar: 'https://cdn-icons-png.flaticon.com/128/2202/2202112.png',
     rating: 4.6,
     totalReviews: 8,
     createdAt: '2023-10-05T14:15:00.000Z',
@@ -186,7 +186,8 @@ export const TASKS: Task[] = [
       address: 'Nalanda, Bihar'
     },
     images: [
-      'https://img.staticmb.com/mbcontent/images/uploads/2023/2/wall-paint-color-ideas-for-home.jpg'
+      'https://img.staticmb.com/mbcontent/images/uploads/2023/2/wall-paint-color-ideas-for-home.jpg',
+      'https://images.livspace-cdn.com/w:3840/plain/https://d3gq2merok8n5r.cloudfront.net/abhinav/ond-1634120396-Obfdc/jas-2024-1720241010-wAOzD/category-units-1720241275-Jc6G0/wp15-1-1720606901-nqVG0.jpg'
     ],
     createdAt: '2023-11-12T14:45:00.000Z',
     deadline: '2023-11-18T18:00:00.000Z',
@@ -255,8 +256,8 @@ export const TASKS: Task[] = [
       address: 'Laxmi Nagar, Delhi, India'
     },
     images: [
-      'https://images.unsplash.com/photo-1595515106969-3bca31fea6e7?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8N3x8ZnVybml0dXJlJTIwYXNzZW1ibHl8ZW58MHx8MHx8fDA%3D',
-      'https://images.unsplash.com/photo-1586023492125-27b2c045efd7?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8ZnVybml0dXJlfGVufDB8fDB8fHww'
+      'https://www.nismaayadecor.in/cdn/shop/files/nismaaya-paniz-kitchen-cabinet_1.png?v=1686306906&width=1080',
+      'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT2l542QdshWDxZpHoIhQzKQVH5Rl-uuAYFwhB_80jOOD2BpxQrRvzd8CG2C5v-P_2TxX0&usqp=CAU'
     ],
     createdAt: '2023-11-11T13:10:00.000Z',
     deadline: '2023-11-14T20:00:00.000Z',
