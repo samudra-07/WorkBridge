@@ -1,4 +1,3 @@
-
 import React, { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import { Layout } from '../components/layout/Layout';
@@ -31,11 +30,10 @@ const Dashboard = () => {
 
   // Filter tasks based on user role
   let myTasks: Task[] = [];
-  if (user.role === 'client') {
+  if (user?.role === 'client') {
     myTasks = TASKS.filter(task => task.clientId === user.id);
   } else {
-    // For workers, we'd typically show tasks they've bid on
-    // Using mock data as placeholder
+    // For workers, show tasks they've bid on
     myTasks = TASKS.filter(task => task.bids.some(bid => bid.workerId === user.id));
   }
 
@@ -255,8 +253,8 @@ const Dashboard = () => {
               <Card className="mb-6">
                 <CardHeader>
                   <div className="flex justify-between items-center">
-                    <CardTitle>{user.role === 'client' ? 'My Tasks' : 'My Bids'}</CardTitle>
-                    {user.role === 'client' && (
+                    <CardTitle>{user?.role === 'client' ? 'My Tasks' : 'My Bids'}</CardTitle>
+                    {user?.role === 'client' && (
                       <Button asChild>
                         <Link to="/post-task" className="flex items-center">
                           <PlusCircle className="h-4 w-4 mr-2" />
@@ -269,45 +267,66 @@ const Dashboard = () => {
                 <CardContent>
                   {myTasks.length > 0 ? (
                     <div className="space-y-4">
-                      {myTasks.map((task) => (
-                        <div key={task.id} className="border border-gray-200 rounded-lg p-4 hover:border-workbridge-200 transition-colors">
-                          <div className="flex justify-between items-start mb-2">
-                            <Link to={`/tasks/${task.id}`} className="hover:text-workbridge-600 transition-colors">
-                              <h3 className="font-medium text-lg">{task.title}</h3>
-                            </Link>
-                            <Badge variant={task.status === 'open' ? 'default' : 'secondary'} className="capitalize">
-                              {task.status}
-                            </Badge>
-                          </div>
-                          <div className="flex flex-wrap gap-4 mb-3 text-sm text-gray-500">
-                            <div className="flex items-center">
-                              <MapPin className="h-4 w-4 mr-1" />
-                              {task.location.address}
-                            </div>
-                            <div className="flex items-center">
-                              <Clock className="h-4 w-4 mr-1" />
-                              Posted {formatDistanceToNow(new Date(task.createdAt), { addSuffix: true })}
-                            </div>
-                          </div>
-                          <div className="flex justify-between items-center mt-4">
-                            <div>
-                              <p className="text-sm text-gray-500">Budget:</p>
-                              <p className="font-semibold">
-                                ₹{task.budget?.min} - ₹{task.budget?.max}
-                              </p>
-                            </div>
-                            <div>
-                              <p className="text-sm text-gray-500">Bids:</p>
-                              <p className="font-semibold">{task.bids.length}</p>
-                            </div>
-                            <Button asChild variant="outline" size="sm">
-                              <Link to={`/tasks/${task.id}`}>
-                                {user.role === 'client' ? 'View Bids' : 'View Details'}
+                      {myTasks.map((task) => {
+                        const userBid = user?.role === 'worker' 
+                          ? task.bids.find(bid => bid.workerId === user.id)
+                          : null;
+
+                        return (
+                          <div key={task.id} className="border border-gray-200 rounded-lg p-4 hover:border-workbridge-200 transition-colors">
+                            <div className="flex justify-between items-start mb-2">
+                              <Link to={`/tasks/${task.id}`} className="hover:text-workbridge-600 transition-colors">
+                                <h3 className="font-medium text-lg">{task.title}</h3>
                               </Link>
-                            </Button>
+                              <div className="flex items-center gap-2">
+                                {userBid && (
+                                  <Badge 
+                                    variant={
+                                      userBid.status === 'accepted' ? 'success' :
+                                      userBid.status === 'rejected' ? 'destructive' :
+                                      'default'
+                                    }
+                                  >
+                                    {userBid.status === 'accepted' ? 'Won' :
+                                     userBid.status === 'rejected' ? 'Not Selected' :
+                                     'Pending'}
+                                  </Badge>
+                                )}
+                                <Badge variant={task.status === 'open' ? 'default' : 'secondary'} className="capitalize">
+                                  {task.status}
+                                </Badge>
+                              </div>
+                            </div>
+                            <div className="flex flex-wrap gap-4 mb-3 text-sm text-gray-500">
+                              <div className="flex items-center">
+                                <MapPin className="h-4 w-4 mr-1" />
+                                {task.location.address}
+                              </div>
+                              <div className="flex items-center">
+                                <Clock className="h-4 w-4 mr-1" />
+                                Posted {formatDistanceToNow(new Date(task.createdAt), { addSuffix: true })}
+                              </div>
+                            </div>
+                            <div className="flex justify-between items-center mt-4">
+                              <div>
+                                <p className="text-sm text-gray-500">Budget:</p>
+                                <p className="font-semibold">
+                                  ₹{task.budget?.min} - ₹{task.budget?.max}
+                                </p>
+                              </div>
+                              <div>
+                                <p className="text-sm text-gray-500">Bids:</p>
+                                <p className="font-semibold">{task.bids.length}</p>
+                              </div>
+                              <Button asChild variant="outline" size="sm">
+                                <Link to={`/tasks/${task.id}`}>
+                                  {user.role === 'client' ? 'View Bids' : 'View Details'}
+                                </Link>
+                              </Button>
+                            </div>
                           </div>
-                        </div>
-                      ))}
+                        );
+                      })}
                     </div>
                   ) : (
                     <div className="text-center py-10">

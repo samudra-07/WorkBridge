@@ -34,7 +34,6 @@ export const CATEGORIES: Category[] = [
   }
 ];
 
-// Mock Users
 export const USERS: User[] = [
   {
     id: 'user-1',
@@ -42,7 +41,7 @@ export const USERS: User[] = [
     email: 'samudragupta@example.com',
     phone: '+91 9876543210',
     role: 'worker',
-    avatar: '',
+    avatar: 'https://ui-avatars.com/api/?name=Samudragupta+Barma&background=random',
     rating: 4.8,
     totalReviews: 15,
     createdAt: '2023-09-15T10:30:00.000Z',
@@ -61,17 +60,17 @@ export const USERS: User[] = [
     email: 'aashi@example.com',
     phone: '+91 9876543211',
     role: 'worker',
-    avatar: '',
+    avatar: 'https://ui-avatars.com/api/?name=Aashi&background=random',
     rating: 4.9,
     totalReviews: 27,
     createdAt: '2023-08-20T15:45:00.000Z',
-    bio: 'Professional carpenter specializing in custom furniture and home renovations',
+    bio: 'Professional carpenter from Sonipat specializing in custom furniture and home renovations',
     skills: ['Carpentry', 'Furniture Assembly', 'Wood Work'],
     verified: true,
     location: {
       lat: 29.0588,
       lng: 76.0856,
-      address: 'Rohtak, Haryana'
+      address: 'Sonipat, Haryana'
     }
   },
   {
@@ -80,11 +79,11 @@ export const USERS: User[] = [
     email: 'shreshta@example.com',
     phone: '+91 9876543212',
     role: 'worker',
-    avatar: '',
+    avatar: 'https://ui-avatars.com/api/?name=Shreshta&background=random',
     rating: 4.7,
     totalReviews: 32,
     createdAt: '2023-07-10T09:20:00.000Z',
-    bio: 'Professional painter with expertise in interior and exterior painting',
+    bio: 'Professional painter based in Delhi with expertise in interior and exterior painting',
     skills: ['Painting', 'Wall Design', 'Texture Work'],
     verified: true,
     location: {
@@ -99,11 +98,11 @@ export const USERS: User[] = [
     email: 'pawan@example.com',
     phone: '+91 9876543213',
     role: 'client',
-    avatar: '',
+    avatar: 'https://ui-avatars.com/api/?name=Pawan+Kumar&background=random',
     rating: 4.6,
     totalReviews: 8,
     createdAt: '2023-10-05T14:15:00.000Z',
-    bio: 'Business owner looking for skilled professionals for various projects',
+    bio: 'Business owner from Nalanda looking for skilled professionals for various projects',
     verified: true,
     location: {
       lat: 25.1304,
@@ -124,16 +123,15 @@ export const USERS: User[] = [
   }
 ];
 
-// Mock Tasks
 export const TASKS: Task[] = [
   {
     id: 'task-1',
     title: 'Bathroom Plumbing Repair',
-    description: 'Need to fix a leaking sink and replace the shower head in my bathroom. The sink has been leaking for about a week and water pressure in the shower is very low.',
+    description: 'Need to fix a leaking sink and replace the shower head in my bathroom.',
     category: 'Home Services',
     subcategory: 'Plumbing',
-    clientId: 'user-1',
-    status: 'open',
+    clientId: 'user-4', // Pawan Kumar
+    status: 'completed',
     budget: {
       min: 2000,
       max: 3500
@@ -153,16 +151,59 @@ export const TASKS: Task[] = [
       {
         id: 'bid-1',
         taskId: 'task-1',
-        workerId: 'user-3',
+        workerId: 'user-1', // Samudragupta
         amount: 2800,
         message: 'I can fix this in 2 hours. Have all necessary tools and replacement parts.',
-        status: 'pending',
+        status: 'accepted',
         createdAt: '2023-11-11T10:15:00.000Z'
+      },
+      {
+        id: 'bid-2',
+        taskId: 'task-1',
+        workerId: 'user-2', // Aashi
+        amount: 3000,
+        message: 'Available tomorrow with all required tools.',
+        status: 'rejected',
+        createdAt: '2023-11-11T11:20:00.000Z'
       }
     ]
   },
   {
     id: 'task-2',
+    title: 'Living Room Painting',
+    description: 'Need to paint my living room with premium quality paint.',
+    category: 'Home Services',
+    subcategory: 'Painting',
+    clientId: 'user-4', // Pawan Kumar
+    status: 'in-progress',
+    budget: {
+      min: 8000,
+      max: 12000
+    },
+    location: {
+      lat: 28.4595,
+      lng: 77.0266,
+      address: 'Nalanda, Bihar'
+    },
+    images: [
+      'https://images.unsplash.com/photo-1562663464-36b9b99558c9?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8cGFpbnRpbmclMjB3YWxsc3xlbnwwfHwwfHx8MA%3D%3D'
+    ],
+    createdAt: '2023-11-12T14:45:00.000Z',
+    deadline: '2023-11-18T18:00:00.000Z',
+    bids: [
+      {
+        id: 'bid-3',
+        taskId: 'task-2',
+        workerId: 'user-3', // Shreshta
+        amount: 10000,
+        message: 'Can start tomorrow with premium quality paint and tools.',
+        status: 'accepted',
+        createdAt: '2023-11-13T09:30:00.000Z'
+      }
+    ]
+  },
+  {
+    id: 'task-3',
     title: 'Website Development for Small Business',
     description: 'Looking for a web developer to create a responsive website for my small retail business. Need product catalog, contact form, and about page. Design should be modern and mobile-friendly.',
     category: 'Professional',
@@ -186,48 +227,13 @@ export const TASKS: Task[] = [
     deadline: '2023-12-10T23:59:00.000Z',
     bids: [
       {
-        id: 'bid-2',
-        taskId: 'task-2',
+        id: 'bid-4',
+        taskId: 'task-3',
         workerId: 'user-5',
         amount: 25000,
         message: 'I specialize in creating modern, responsive websites for small businesses. Can deliver in 3 weeks with all requested features.',
         status: 'pending',
         createdAt: '2023-11-09T16:20:00.000Z'
-      }
-    ]
-  },
-  {
-    id: 'task-3',
-    title: 'Living Room Painting',
-    description: 'Need to paint my living room (approximately 20x15 feet) with premium quality paint. The walls need minor repairs before painting. I have already purchased the paint (light beige color).',
-    category: 'Home Services',
-    subcategory: 'Painting',
-    clientId: 'user-4',
-    status: 'open',
-    budget: {
-      min: 5000,
-      max: 8000
-    },
-    location: {
-      lat: 28.4595,
-      lng: 77.0266,
-      address: 'DLF Phase 4, Gurugram, Haryana, India'
-    },
-    images: [
-      'https://images.unsplash.com/photo-1562663464-36b9b99558c9?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8cGFpbnRpbmclMjB3YWxsc3xlbnwwfHwwfHx8MA%3D%3D',
-      'https://images.unsplash.com/photo-1599619585752-c3edb42a414c?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTJ8fHBhaW50aW5nJTIwd2FsbHN8ZW58MHx8MHx8fDA%3D'
-    ],
-    createdAt: '2023-11-09T11:20:00.000Z',
-    deadline: '2023-11-20T18:00:00.000Z',
-    bids: [
-      {
-        id: 'bid-3',
-        taskId: 'task-3',
-        workerId: 'user-2',
-        amount: 6500,
-        message: 'I can complete this job in 2 days with wall repairs and proper finishing. Have 5 years of experience in interior painting.',
-        status: 'pending',
-        createdAt: '2023-11-10T09:45:00.000Z'
       }
     ]
   },
