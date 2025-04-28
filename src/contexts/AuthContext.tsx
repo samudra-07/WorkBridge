@@ -49,6 +49,11 @@ export const AuthProvider: React.FC<AuthProviderProps> = ({ children }) => {
       const foundUser = USERS.find(u => u.email.toLowerCase() === email.toLowerCase());
       
       if (foundUser) {
+        // Create avatar URL based on name if none exists
+        if (!foundUser.avatar) {
+          foundUser.avatar = `https://ui-avatars.com/api/?name=${encodeURIComponent(foundUser.name)}&background=random&color=fff`;
+        }
+        
         setUser(foundUser);
         localStorage.setItem('workbridge_user', JSON.stringify(foundUser));
         toast({
@@ -102,7 +107,7 @@ export const AuthProvider: React.FC<AuthProviderProps> = ({ children }) => {
         name,
         email,
         role,
-        avatar: `https://ui-avatars.com/api/?name=${encodeURIComponent(name)}&background=0D8ABC&color=fff`,
+        avatar: `https://ui-avatars.com/api/?name=${encodeURIComponent(name)}&background=random&color=fff`,
         rating: 0,
         totalReviews: 0,
         createdAt: new Date().toISOString(),

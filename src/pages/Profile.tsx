@@ -7,6 +7,7 @@ import { Badge } from "@/components/ui/badge";
 import { Star } from "lucide-react";
 import { useAuth } from '../contexts/AuthContext';
 import { useNavigate } from 'react-router-dom';
+import { getInitials } from '../utils/avatar';
 
 const Profile = () => {
   const { user, isAuthenticated } = useAuth();
@@ -19,13 +20,6 @@ const Profile = () => {
   }, [isAuthenticated, navigate]);
 
   if (!user) return null;
-
-  const getInitials = (name: string) => {
-    return name.split(' ')
-      .map((part) => part[0])
-      .join('')
-      .toUpperCase();
-  };
 
   return (
     <Layout>

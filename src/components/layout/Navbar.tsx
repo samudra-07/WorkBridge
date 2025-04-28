@@ -14,6 +14,7 @@ import {
 import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
 import { Menu, X, Bell, User, LogOut, Settings } from 'lucide-react';
 import { cn } from '@/lib/utils';
+import { getInitials } from '@/utils/avatar';
 
 export const Navbar: React.FC = () => {
   const { user, isAuthenticated, logout } = useAuth();
@@ -105,7 +106,7 @@ export const Navbar: React.FC = () => {
           <div className="hidden sm:ml-6 sm:flex sm:items-center space-x-4">
             {isAuthenticated ? (
               <>
-                <Button variant="ghost" size="icon" className="relative">
+                <Button variant="ghost" size="icon" className="relative" onClick={() => navigate('/notifications')}>
                   <Bell className="h-5 w-5" />
                   <span className="absolute top-0 right-0 block h-2 w-2 rounded-full bg-red-500"></span>
                 </Button>

@@ -7,6 +7,8 @@ import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Label } from '@/components/ui/label';
 import { useAuth } from '../contexts/AuthContext';
+import { getInitials } from '../utils/avatar';
+import { User, Lock } from 'lucide-react';
 
 const Login = () => {
   const [email, setEmail] = useState('');
@@ -36,6 +38,7 @@ const Login = () => {
       }
     } catch (err) {
       setError('An error occurred. Please try again.');
+      console.error("Login error:", err);
     } finally {
       setLoading(false);
     }
@@ -61,14 +64,18 @@ const Login = () => {
               <form className="space-y-4" onSubmit={handleSubmit}>
                 <div className="space-y-2">
                   <Label htmlFor="email">Email</Label>
-                  <Input
-                    id="email"
-                    type="email"
-                    placeholder="name@example.com"
-                    value={email}
-                    onChange={(e) => setEmail(e.target.value)}
-                    required
-                  />
+                  <div className="relative">
+                    <User className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-500 h-4 w-4" />
+                    <Input
+                      id="email"
+                      type="email"
+                      placeholder="name@example.com"
+                      value={email}
+                      onChange={(e) => setEmail(e.target.value)}
+                      className="pl-10"
+                      required
+                    />
+                  </div>
                 </div>
                 <div className="space-y-2">
                   <div className="flex items-center justify-between">
@@ -77,14 +84,18 @@ const Login = () => {
                       Forgot password?
                     </Link>
                   </div>
-                  <Input
-                    id="password"
-                    type="password"
-                    placeholder="••••••••"
-                    value={password}
-                    onChange={(e) => setPassword(e.target.value)}
-                    required
-                  />
+                  <div className="relative">
+                    <Lock className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-500 h-4 w-4" />
+                    <Input
+                      id="password"
+                      type="password"
+                      placeholder="••••••••"
+                      value={password}
+                      onChange={(e) => setPassword(e.target.value)}
+                      className="pl-10"
+                      required
+                    />
+                  </div>
                 </div>
                 <Button type="submit" className="w-full" disabled={loading}>
                   {loading ? 'Signing In...' : 'Sign In'}
@@ -106,7 +117,7 @@ const Login = () => {
                   <Button 
                     variant="outline" 
                     onClick={() => {
-                      setEmail('rohit@example.com');
+                      setEmail('pawan@example.com');
                       setPassword('password');
                     }}
                   >
@@ -115,7 +126,7 @@ const Login = () => {
                   <Button 
                     variant="outline"
                     onClick={() => {
-                      setEmail('priya@example.com');
+                      setEmail('samudragupta@example.com');
                       setPassword('password');
                     }}
                   >
