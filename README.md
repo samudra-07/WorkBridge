@@ -1,7 +1,8 @@
-
 # 🚀 WorkBridge
 
 **WorkBridge** is a modern platform that connects clients and workers to get tasks done! Whether you're a client looking for help or a worker bidding on jobs, this app streamlines the process with an easy-to-use interface. Built with **React**, **Vite**, and **Tailwind CSS**, it’s designed for speed and scalability!
+
+Site Link: [WorkBridge](https://work-bridge-two.vercel.app/)
 
 ---
 
@@ -13,7 +14,7 @@
 - 🔒 **User Authentication**: Secure login and registration.
 - 📝 **Post Tasks**: Clients can easily create and submit tasks.
 - 📊 **Task Management**: View, edit, and track tasks in real time.
-- 🌙 **Dark Mode**: Light and dark modes for your comfort.
+- 🌃 **Dark Mode**: Light and dark modes for your comfort.
 
 ---
 
@@ -30,9 +31,9 @@
 
 ---
 
-## 🎯 Future Goals
+## 🌟 Future Goals
 
-- 🔙 **Backend Implementation**: Node.js/Express or similar.
+- 🖙 **Backend Implementation**: Node.js/Express or similar.
 - 🛠️ **Database**: Integration with MongoDB/PostgreSQL for persistent storage.
 - 🔑 **Authentication**: Real login/signup with JWT/OAuth.
 - 📈 **AI Recommendations**: Personalize tasks using AI.
@@ -78,7 +79,7 @@ This project is licensed under the [MIT License](LICENSE).
 
 ---
 
-## 📬 Contact
+## 📮 Contact
 
 Got questions or feedback? Reach out to [samudra-07](https://github.com/samudra-07)!
 
